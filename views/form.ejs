@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <%- include('./partials/head', { title: 'Formulário' }) %>
+</head>
+<body>
+
+    <h3 class="title text-center">FORMULÁRIO</h3>
+
+    <form class="needs-validation" novalidate>
+        <div class="form-row">
+          <div class="col-md-4 mb-3">
+            <label for="validationCustom01">Primeiro Nome</label>
+            <input type="text" class="form-control" id="validationCustom01" placeholder="Primeiro Nome" required>
+            <p class="valid-feedback">Parece bom!</p>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="validationCustom02">Último Nome</label>
+            <input type="text" class="form-control" id="validationCustom02" placeholder="Último Nome" required>
+            
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="validationCustomUsername">Username</label>
+            <div class="input-group">
+              <div class="input-group-prepend"><span class="input-group-text" id="inputGroupPrepend">@</span></div>
+              <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+              <p class="invalid-feedback">Por favor, escolha um username.</p>
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-md-6 mb-3">
+            <label for="validationCustom03">Cidade</label>
+            <input type="text" class="form-control" id="validationCustom03" placeholder="Cidade" required>
+            <p class="invalid-feedback">Por favor, insira uma cidade válida.</p>
+          </div>
+          <div class="col-md-3 mb-3">
+            <label for="validationCustom04">Estado</label>
+            <input type="text" class="form-control" id="validationCustom04" placeholder="Estado" required>
+            <p class="invalid-feedback">Por favor, insira um estado válido.</p>
+          </div>
+          <div class="col-md-3 mb-3">
+            <label for="validationCustom05">CEP</label>
+            <input type="text" class="form-control" id="validationCustom05" placeholder="CEP" required>
+            <p class="invalid-feedback">Por favor, insira um CEP válido.</p>
+          </div>
+        </div>
+        <button class="btn btn-primary" type="submit">Enviar Formulário</button>
+      </form>
+
+    <%- include('./partials/footer') %>
+
+</body>
+</html>
