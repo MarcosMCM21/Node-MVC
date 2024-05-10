@@ -1,6 +1,5 @@
 const express = require('express')
-const routes = require('./routes')
-const path = require('path')
+const routes = require('./routes/routes')
 const app = express()
 
 // CONFIGURAÇÃO DO EJS

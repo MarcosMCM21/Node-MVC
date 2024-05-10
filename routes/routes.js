@@ -1,7 +1,7 @@
 const express = require('express')
 // CONTROLLERS
-const formController = require('./controllers/formController')
-const homeController = require('./controllers/homeController')
+const formController = require('../controllers/formController')
+const homeController = require('../controllers/homeController')
 
 // ROTAS
 const route = express.Router()

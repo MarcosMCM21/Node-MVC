@@ -3,7 +3,9 @@ exports.view = (req, res) => {
 }
 
 exports.post = (req,res) => {
-    console.log("Função FormPost")
-    res.send(req.query)
-    res.send("Rota /form usando POST acessada")
+    console.log(req.query)
+    console.log(req)
+    console.log(res)
+    paramEmail = req.body['email']
+    res.render('email', { email: paramEmail })
 }
