@@ -37,12 +37,10 @@ form button {
 
 footer {
     background-color: rgb(0, 0, 0);
-    position: absolute;
-    left: 0;
+    margin-top: 20px;
     bottom: 0;
     height: 70px;
     width: 100%;
-    overflow: hidden;
 }
 
 footer p {
