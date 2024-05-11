@@ -36,11 +36,13 @@ form button {
 }
 
 footer {
-    margin-top: 20px;
-    background-color: rgba(0, 0, 0, 1);
-    position: relative;
-    width: 100%;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    left: 0;
     bottom: 0;
+    height: 70px;
+    width: 100%;
+    overflow: hidden;
 }
 
 footer p {
