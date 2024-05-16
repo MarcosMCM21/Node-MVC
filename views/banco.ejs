@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <%- include('./partials/head', { title: 'Dados' }) %>
+</head>
+<body>
+    
+    <h1>DADOS DO BANCO DE DADOS</h1>
+    <h2>Database: nodejs</h2>
+    <h3>Table: TESTE</h3>
+
+    <table>
+        <thead>
+            <tr>
+                <th>CAMPO 1</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% dados.forEach(dado => {%>
+                <tr>
+                    <td><%= dado.campo1 %></td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+
+    <%- include('./partials/footer') %>
+    
+</body>
+</html>

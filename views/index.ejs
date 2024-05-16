@@ -4,16 +4,21 @@
     <%- include('./partials/head', { title: 'Home' }) %>
 </head>
 <body>
-    
-    <h1 class="title text-center">MVC UTILIZANDO NODE</h1>
 
-    <div class="rotas">
-        <ul>
-            <li>
-                <p>UTILIZAR ROTA '/FORM' PARA ACESSAR O FORMULÁRIO: <a href="/form">FORMULÁRIO</a></p>
-            </li>
-        </ul>
-    </div>
+    <section class="home" id="home">
+        <h1 class="title text-center">MVC UTILIZANDO NODE</h1>
+
+        <div class="rotas">
+            <ul>
+                <li>
+                    <p>UTILIZAR ROTA '/cadastro' PARA ACESSAR O FORMULÁRIO: <a href="/cadastro">FORMULÁRIO</a></p>
+                </li>
+                <li>
+                    <p>UTILIZAR ROTA '/dados' PARA VISUALIZAR OS DADOS DO BANCO nodedb: <a href="/Dados">DADOS</a></p>
+                </li>
+            </ul>
+        </div>
+    </section>
 
     <%- include('./partials/footer') %>
     

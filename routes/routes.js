@@ -2,6 +2,7 @@ const express = require('express')
 // CONTROLLERS
 const formController = require('../controllers/formController')
 const homeController = require('../controllers/homeController')
+const bancoController = require('../controllers/bancoController')
 
 // ROTAS
 const route = express.Router()
@@ -12,9 +13,11 @@ route.get('/rota2',(req, res) => {
     res.send('rota2')
 })
 
-route.get('/form', formController.view)
+route.get('/cadastro', formController.view)
 
-route.post('/form', formController.post)
+route.post('/cadastro', formController.post)
+
+route.get('/dados', bancoController.view)
 
 route.get('/comparametros/:nome?/:sobrenome?',(req, res) => {
     res.send('rota com parametros')
