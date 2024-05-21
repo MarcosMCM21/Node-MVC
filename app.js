@@ -8,6 +8,14 @@ const app = express()
 app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname + '/views'))
 
+// CONFIGURAÇÃO DOS ARQUIVOS ESTÁTICOS DA PÁGINA CSS E JS
+app.use(express.static(path.resolve(__dirname, 'public')))
+
+// CONFIGURAÇÃO DO BOOTSTRAP
+app.use('/css', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/css')))
+app.use('/js', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/js')))
+app.use('/js', express.static(path.join(__dirname, 'node_modules/bootstrap/jquery/dist')))
+
 // CONFIGURAÇÃO PARA PERMITIR ENVIO DE PARÂMETROS NO CORPO DA REQUISIÇÃO
 app.use(
     express.urlencoded(
@@ -17,8 +25,7 @@ app.use(
     )
 )
 
-// CONFIGURAÇÃO DOS ARQUIVOS ESTÁTICOS DA PÁGINA CSS E JS
-app.use(express.static(path.resolve(__dirname, 'public')))
+
 
 // CONFIGURAÇÃO DAS ROTAS
 app.use('/', routes)

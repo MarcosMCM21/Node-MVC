@@ -21,3 +21,14 @@ exports.insert = async (dado) => {
         console.log(err);
     }
 }
+
+exports.pessoaGetAll = async () => {
+    try {
+        const sql = 'SELECT * FROM pessoa';
+        const [rows, fields] = await connection.execute(sql);
+
+        return rows
+    } catch (err) {
+        console.log(err);
+    }
+}

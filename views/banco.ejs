@@ -6,19 +6,31 @@
 <body>
     
     <h1>DADOS DO BANCO DE DADOS</h1>
-    <h2>Database: nodejs</h2>
-    <h3>Table: TESTE</h3>
+    <h2>Database: NODEDB</h2>
+    <h3>Table: PESSOA</h3>
 
-    <table>
-        <thead>
+    <table class="table">
+        <thead class="table-dark">
             <tr>
-                <th>CAMPO 1</th>
+                <th scope="col">#</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Telefone</th>
+                <th scope="col">Endereço</th>
+                <th scope="col">Email</th>
+                <th scope="col">CPF</th>
+                <th scope="col">RG</th>
             </tr>
         </thead>
         <tbody>
             <% dados.forEach(dado => {%>
                 <tr>
-                    <td><%= dado.campo1 %></td>
+                    <th scope="row"><%= dado.ID %></th>
+                    <td><%= dado.Nome %></td>
+                    <td><%= dado.Telefone %></td>
+                    <td><%= dado.Endereco %></td>
+                    <td><%= dado.Email %></td>
+                    <td><%= dado.CPF %></td>
+                    <td><%= dado.RG %></td>
                 </tr>
             <% }) %>
         </tbody>
